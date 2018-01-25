@@ -1,0 +1,22 @@
+body {
+	background-image: url(../images/SpaceBackground.jpg);
+}
+
+#big-container	{
+	max-width: 1000px;
+	margin-left: 220px;
+
+}
+
+header	{
+	color: #1f3eaf;
+	max-width: 450px;
+	text-align: center;
+	padding: 25px;
+	margin-left: 275px;
+}
+
+.container	{
+	max-width: 1000px;
+	background-image: url(../images/TitleSpaceBackground.jpeg);
+}
