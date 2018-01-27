@@ -21,72 +21,94 @@ var clockRunning = false;
 
 //create an array of answers
 //use.attr = true and false to denote which goes to what score.
-var questions = [
+var questions =	[
 	{
 	"question": "In 'My Neighbor Totoro', what was Totoro's most frequently used animal transport",
-	"answer": "Cat Bus", 
-	"option1": "Monster Taxi", "Big Blue Bicycle", "Rat Car"
+	"answer": [
+		"Cat Bus", 
+		"Monster Taxi", 
+		"Big Blue Bicycle", 
+		"Rat Car"
+		]
 	},	
 	{
 	"question": "What was the name of Gary Oldman's pimp character in 'True Romance'",
-	"answer": "Drexl", 
-	"distractors": "Marvin", "Detroit", "Clarence"
+	"answer": [
+		"Drexl", 
+		"Marvin", 
+		"Detroit", 
+		"Clarence"
+		]
 	},	
  	{
 	"question": "How many kids went on adventure together in 'The Goonies'", 
-	"answer": "Seven", 
-	"distractors": "Eight", "Five", "Twelve"
+	"answer": [
+		"Seven", 
+		"Eight", 
+		"Five", 
+		"Twelve"
+		] 
 	}, 
 	{
 	"question": "Ridley Scott's 'The Duellists' took place in what era",
-	"answer": "1800's",
-	"distractors": "1600's", "1500's", "1700's"
+	"answer": [
+		"1800's", 
+		"1600's", 
+		"1500's", 
+		"1700's"
+		]
 	},
 	{
 	"question": "In 'Pathfinder', what was Ghost's biological ethnicity",
-	"answer": "Norse",
-	"distractors": "Native American", "Asian", "Hispanic"
+	"answer": [
+		"Norse", 
+		"Native American", 
+		"Asian", 
+		"Hispanic"
+		] 
 	},
 	{
 	"question": "Which character in 2010's 'Tron' best represents the 'hidden Buddha'",
-	"answer": "Clu",
-	"distractors": "Tron", "Crom", "Ram" 
+	"answer": [
+		"Clu", 
+		"Tron", 
+		"Crom", 
+		"Ram"
+		] 
 	},
 	{
-	"question": "Alabama Whitman also gets a mention in what famous Quentin Tarantino movie"]
-	"answer": "Reservoir Dogs",
-	"distractors": "Killing Zoe", "Pulp Fiction", "Jackie Brown"
+	"question": "Alabama Whitman also gets a mention in what famous Quentin Tarantino movie",
+	"answer": [
+		"Reservoir Dogs", 
+		"Killing Zoe", 
+		"Pulp Fiction", 
+		"Jackie Brown"
+		]
 	},
 	{
 	"question": "What 2017 big budget, blockbuster film did director Rian Johnson direct in addition to indie films 'Brick' and 'Looper'",
-	"answer": "Star Wars: The Last Jedi",
-	"distractors": "Wonder Woman", "It", "Beauty and the Beast"
+	"answer": [
+		"Star Wars: The Last Jedi", 
+		"Wonder Woman", 
+		"It", 
+		"Beauty and the Beast"
+		]
 	}
-]
-	
+]	
 
 //Run function
 function startGame()	{
-
+//Gets the clock counting down 
 	if (!clockRunning)	{
 		clockRunning = true;
 		intervalGo = setInterval(decrement, 1000);
 	}
-
+//Makes game initilizing button disappear
 	$("#startBtn").remove();
-	
-	for (var i = 0; i < questions.length; i++)	{
-		//create div
-		//create question
-		$("#action-box").html("<h3>" + questions[i].question + "?</h3>")
-		//for loop for answers using j (after add randomization)
-		//after for look append div to action box
-	}
-
 }
+
 function decrement()	{
 //Decrease second cound by 1
-console.log(number);
 	number--;
 //Show time remaining and decreasing seciond count on screen by adding it to html	
 	$("#timer").html("<h3>" + "Time Remaining: " + number + " seconds" + "<h3>");
@@ -96,6 +118,25 @@ console.log(number);
 	endGame();
 	}
 };
+
+function generateQuestions()	{
+//Assign the key of "true" to question.answer[0]
+	for (var t = 0; t < questions.length; t++)	{
+		var trueAnswer = questions.answer[0];
+		trueAnswer.attr("data-value", true)
+	}	
+
+
+//For Loop(s) generates questions and answers and writed them to html	
+	for (var i = 0; i < questions.length; i++)	{
+		
+		//create question
+		$("#quiz").html("<h3>" + questions[i].question + "?</h3>")
+		// $("#quiz").append("<label")
+		//for loop for answers using j (after add randomization)
+		//after for look append div to action box
+	}
+}
 
 function endGame()	{
 	clearInterval(intervalGo);
