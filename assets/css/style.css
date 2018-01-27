@@ -25,6 +25,19 @@ header	{
 	margin-left: auto;
 }
 
+#doneBtn	{
+	float: none;
+	margin-right: auto;
+	margin-left: 350px;
+	padding: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #5e1d84;
+	color: #FFFFFF;
+	font-size: 30px;
+	margin-top: 25px;
+	
+}
 #startBtn 	{
 	padding: 30px;
 	padding-left: 50px;
@@ -32,8 +45,9 @@ header	{
 	background-color: #5e1d84;
 	color: #FFFFFF;
 	font-size: 30px;
-	margin-top: 125px;
+	margin-top: 125px;	
 }
+
 h3 {
 	/*padding: 25px;*/
 	float: none;
@@ -69,6 +83,13 @@ h2 	{
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#quiz 	{
+	background-color: #5e1d84;
+	padding: 10px;
+	border-radius: 25px;
+	color: #FFFFFF;
 }
 
 .container	{
