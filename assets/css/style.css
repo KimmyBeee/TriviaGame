@@ -17,7 +17,7 @@ body {
 header	{
 
 	color: #FFFFFF;
-	max-width: 450px;
+	max-width: 600px;
 	text-align: center;
 	padding: 25px;
 	float: none;
@@ -25,14 +25,32 @@ header	{
 	margin-left: auto;
 }
 
+#startBtn 	{
+	padding: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #5e1d84;
+	color: #FFFFFF;
+	font-size: 30px;
+	margin-top: 125px;
+}
 h3 {
-	padding: 25px;
+	/*padding: 25px;*/
 	float: none;
 	margin-right: auto;
 	margin-left: auto;
 	color: #FFFFFF;
 	text-align: center;
 	max-width: 1000px;
+}
+
+h2 	{
+	color: #FFFFFF;
+	text-align: center;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 25px;
 }
 
 #action-box	{
@@ -42,6 +60,12 @@ h3 {
 
 .button	{
 	clear: both;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#timer	{
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
