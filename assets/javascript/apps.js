@@ -111,7 +111,7 @@ function decrement()	{
 	$("#timer").html("<h3>" + "Time Remaining: " + number + " seconds" + "<h3>");
 //If time runs out.. 	
 	if (number === 0)	{
-		
+
 //..end the game
 	endGame();
 	}
@@ -174,6 +174,7 @@ function endGame()	{
 	clockRunning = false;
 	$("#quiz").remove();
 	$("#done-button").remove();
+	$("#timer").remove();
 
 	$("#action-box").html("<h2>" + "You are all done!!" + "<h2>");
 	$("#action-box").append("<h3>" + "Correct Answers: " + answerCorrect + "<h3>");
