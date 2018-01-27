@@ -25,75 +25,44 @@ var questions = [
 	{
 	"question": "In 'My Neighbor Totoro', what was Totoro's most frequently used animal transport",
 	"answer": "Cat Bus", 
-	"option1": "Monster Taxi", 
-	"option2": "Big Blue Bicycle", 
-	"option3": "Rat Car"
-	},
+	"option1": "Monster Taxi", "Big Blue Bicycle", "Rat Car"
+	},	
 	{
-	"question": "What was the name of Gary Oldman's character in 'True Romance'",
+	"question": "What was the name of Gary Oldman's pimp character in 'True Romance'",
 	"answer": "Drexl", 
-	"option1": "Marvin", 
-	"option2": "Detroit", 
-	"option3": "Clarence"
-	},
-		
+	"distractors": "Marvin", "Detroit", "Clarence"
+	},	
  	{
 	"question": "How many kids went on adventure together in 'The Goonies'", 
 	"answer": "Seven", 
-	"option1": "Eight", 
-	"option2": "Five", 
-	"option3": "Twelve"
-	}
-]; 
-
-var q4 = [
+	"distractors": "Eight", "Five", "Twelve"
+	}, 
 	{
 	"question": "Ridley Scott's 'The Duellists' took place in what era",
 	"answer": "1800's",
-	"option1": "1600's",
-	"option2": "1500's",
-	"option3": "1700's"
-	}
-]; 
-		
-var q5 = [
+	"distractors": "1600's", "1500's", "1700's"
+	},
 	{
 	"question": "In 'Pathfinder', what was Ghost's biological ethnicity",
 	"answer": "Norse",
-	"option1": "Native American",
-	"option2": "Asian",
-	"option3": "Hispanic"
-	}
-];
-
-var q6 = [
+	"distractors": "Native American", "Asian", "Hispanic"
+	},
 	{
 	"question": "Which character in 2010's 'Tron' best represents the 'hidden Buddha'",
 	"answer": "Clu",
-	"option1": "Tron",
-	"option2": "Crom",
-	"option3": "Ram"
-	}
-];
-
-var q7 = [
+	"distractors": "Tron", "Crom", "Ram" 
+	},
 	{
 	"question": "Alabama Whitman also gets a mention in what famous Quentin Tarantino movie"]
 	"answer": "Reservoir Dogs",
-	"option1":
-	"option2":
-	"option3":
+	"distractors": "Killing Zoe", "Pulp Fiction", "Jackie Brown"
+	},
+	{
+	"question": "What 2017 big budget, blockbuster film did director Rian Johnson direct in addition to indie films 'Brick' and 'Looper'",
+	"answer": "Star Wars: The Last Jedi",
+	"distractors": "Wonder Woman", "It", "Beauty and the Beast"
 	}
-];	
-
-
-		
-		
-	
-		
-		
-		
-		"Pulp Fiction",]
+]
 	
 
 //Run function
