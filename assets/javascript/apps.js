@@ -14,8 +14,7 @@ var intervalGo;
 
 var clockRunning = false;
 
-//create an array of answers
-//use.attr = true and false to denote which goes to what score.
+//create an array of objects that are the questions and answers
 var questions =	[
 	{
 	"question": "In 'My Neighbor Totoro', what was Totoro's most frequently used animal transport",
@@ -121,19 +120,23 @@ function generateQuestions()	{
 //Assign "true" value to the first answer of the question - the correct answer
 	for (var t = 0; t < questions.length; t++)	{
 		var trueAnswer = questions[t].answer[0];
-		$(trueAnswer).attr("data-value", true)
+		$(trueAnswer).attr("data-value", true);
+		
 	};
 
 //Assign "false" value to the other three answers to the question - the distractors
 	for (var f = 0; f < questions.length; f++)	{
 		var wrongAnswer1 = questions[f].answer[1];
 		$(wrongAnswer1).attr("data-value", false);
+		
 
 		var wrongAnswer2 = questions[f].answer[2];
 		$(wrongAnswer2).attr("data-value", false);
+		
 
 		var wrongAnswer3 = questions[f].answer[3];
 		$(wrongAnswer3).attr("data-value", false);
+		
 	};	
 
 
@@ -141,13 +144,24 @@ function generateQuestions()	{
 	for (var i = 0; i < questions.length; i++)	{
 		
 		//create question
-		$("#quiz").html("<h3>" + questions[i].question + "?</h3>")
+		$("#quiz").append("<h3>" + questions[i].question + "?</h3><br>")
 
-		//for loop for answers using j (after add randomization)
+		//for loop for answers using a (after add randomization)
+		for (var a = 0; a < questions[i].answer.length; a++)	{
 		//append answers to question
-		$("#quiz").append("<h4>" + "<label class='radio-inline'>" + "<input type='radio' name='optradio'>" + " " + questions[i].answer + "</label>" + "</h4>");
-		
+		//var xx = quesion[i].answer[a]
+		//var xx random = mf mr xx.length
+			$("#quiz").append("<h4>" + "<label class='radio-inline'>" + "<input type='radio' name='optradio'>" + " " + questions[i].answer[a] + "</label>" + "</h4>");
+		}
 		//if statement for picking answer whose value is true
+		//if (){
+
+			//}else if () {
+
+				//}else {
+			//answerUn++
+					//}
+
 
 		//adds one to Correct answer tally
 		//answerCorrect++
@@ -158,7 +172,7 @@ function generateQuestions()	{
 		//if statement for no amswer
 
 		//adds one to Unanswer question tally
-		//answerUn++
+		
 		
 		//
 		//Add done button
